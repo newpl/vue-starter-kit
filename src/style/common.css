@@ -1,0 +1,298 @@
+
+/* [GLOBAL] 화면전체 영역 */
+#root {min-width:1200px;position:relative;font-family: "Roboto";font-size: 12px;
+    line-height: 1.5;color: #000;width:100%;height:100vh;}
+#root .main-frame {position: absolute;width:100%;height: calc(100vh - 50px - 30px);top: 50px;bottom: 30px;overflow: auto;}
+
+
+
+/* [CONTENT] Content 영역 */
+.sub-frame {padding:0 40px;}
+/* [CONTENT] Content 영역 :: TITLE */
+.sub-frame .title-group {height:55px;}
+.sub-frame .title-group .title{line-height:55px;font-weight: bold;font-size:14px;}
+/* [CONTENT] Content 영역 :: page description */
+.sub-frame .page-desc {color:#AAA;}
+
+
+
+ 
+
+/* [CONTENT] Information table */
+#root .sub-frame .info-table {width:100%;border-top:1px solid #888;border-bottom:1px solid #333;table-layout: fixed}
+/* [CONTENT] Information table :: width(4-column) */
+#root .sub-frame .info-table colgroup col:nth-child(odd)  {width:120px;}
+#root .sub-frame .info-table colgroup col:nth-child(even) {width:50%;}
+#root .sub-frame .info-table th {width:120px;}
+#root .sub-frame .info-table td {width:50%;}
+#root .sub-frame .info-table td[colspan="3"] {width:100%;}
+/* [CONTENT] Information table :: height */
+#root .sub-frame .info-table tr {height:32px;line-height:32px;}
+#root .sub-frame .info-table tr:first-child {height:41px;}
+#root .sub-frame .info-table tr:first-child th {padding-top:9px;}
+/* [CONTENT] Information table :: shape */
+#root .sub-frame .info-table th {text-align:left;font-weight:bold;padding-left:5px;}
+#root .sub-frame .info-table td {padding:0 10px;}
+/* [CONTENT] Information table :: component override */
+#root .sub-frame .info-table td .-tb-text-field:first-child {margin-left:-11px;}
+#root .sub-frame .info-table td .dropdown:first-child {margin-left:-12px;}
+#root .sub-frame .info-table td .vdp-datepicker:first-child {margin-left:-11px;}
+/* [CONTENT] Information table :: etc */
+#root .sub-frame .info-table th[required] {}
+#root .sub-frame .info-table th[required]::after {content:'*';color:red;padding-left:3px;}
+/* [CONTENT] Information table :: IE compatibility for dropdown */
+/*#root .sub-frame .info-table td .dropdown {display:-ms-inline-flexbox; -ms-flex-direction:column;}*/
+/*#root .sub-frame .info-table td .dropdown .dropdown-button {display:-ms-inline-flexbox; -ms-flex-direction:column;}*/
+/*#root .sub-frame .info-table td .dropdown {display:-ms-inline-flexbox; -ms-flex-direction:column;}*/
+
+
+
+/* [CONTENT] Sub title */
+#root .sub-frame .sub-title {border-top:1px solid #333;padding:18px 0 10px 5px;margin-top:10px;font-size:14px;}
+#root .sub-frame .sub-title ~ .sub-title {margin-top:30px;}
+#root .sub-frame .sub-title small {margin-left:10px;font-size:0.9em;opacity:0.4;}
+#root .sub-frame .sub-title + .card {}
+#root .sub-frame .sub-title + .card .info-table,
+#root .sub-frame .sub-title + .info-table {border-top:none;}
+#root .sub-frame .sub-title + .card .info-table tr:first-child,
+#root .sub-frame .sub-title + .info-table tr:first-child {height:32px;}
+#root .sub-frame .sub-title + .card .info-table tr:first-child th,
+#root .sub-frame .sub-title + .info-table tr:first-child th {padding-top:0;}
+#root .sub-frame .sub-title + .card + .sub-title,
+#root .sub-frame .sub-title + .info-table + .sub-title {margin-top:-1px;border-top:1px solid #ccc;}
+#root .sub-frame .sub-title + .card .data-table-card {border-top:1px solid #ccc;}
+#root .sub-frame .card + .btn-group {margin-top:15px;}
+
+
+
+
+/* [CONTENT] content search box */
+.sub-frame .card--search {min-height:40px;border:1px solid #888;position:relative;margin-bottom:37px;font-size:0;}
+.sub-frame .card__search-row {height:40px;font-size:0;}
+.sub-frame .card__search-row + .card__search-row {border-top:1px solid #ebebeb;}
+.sub-frame .card__search-comp-area {display:inline-block;position:relative;vertical-align:middle;line-height:40px;height:40px;font-size:13px;
+    border-right:1px solid #ebebeb;}
+.sub-frame .card__search-comp-area:nth-child(3),
+.sub-frame .card__search-comp-area.colspan2 + .card__search-comp-area{border-right:none;}
+/* [CONTENT] content search box :: WIDTH */
+.sub-frame .card__search-comp-area           {width:33.3%;}
+.sub-frame .card__search-comp-area.colspan2  {width:66.6%;}
+.sub-frame .card__search-comp-area.half-area {width:50%;}
+.sub-frame .card__search-comp-area.full-area {width:100%;}
+/* [CONTENT] content search box :: BUTTON */
+.sub-frame .card__btn-area {position:absolute;top:calc(100% + 10px);right:0;}
+.sub-frame .card__btn-area .-tb-button-wrapper {height:26px;}
+.sub-frame .card__btn-area .-tb-button {font-size:12px;font-weight:normal;}
+/* [CONTENT] content search box :: LABEL box */
+.sub-frame .card__search-comp-area__label {width:120px;float:left;padding-left:20px;font-weight:bold;}
+.sub-frame .card__search-comp-area__label .m-icon {font-size:18px;}
+/* [CONTENT] content search box :: COMPONENT box */
+.sub-frame .card__search-comp-area__comp  {margin-left:120px;height:40px;line-height:40px;vertical-align:middle;}
+/* [CONTENT] content search box :: component override */
+.sub-frame .card__search-comp-area__comp .-tb-text-field__input {outline: none;background-color:transparent;}
+.sub-frame .card__search-comp-area__comp .icon {margin-left: -28px; position: relative;}
+
+/* [CONTENT] messagge below tb-data-table :: div */
+.table--empty {text-align:center; height:40px; line-height:40px; border-bottom:1px solid #000; border-top:1px solid #ccc;}
+
+
+
+
+/* [CONTENT] Button group */
+.sub-frame .btn-group {margin:5px 0;}
+.sub-frame .btn-group .-tb-button-wrapper {height:30px;width:inherit;}
+.sub-frame .btn-group .-tb-button-wrapper + .-tb-button-wrapper {margin-left:10px;}
+.sub-frame .btn-group .-tb-button {padding:0 20px;}
+/* [CONTENT] Button group :: for table action */
+#root .sub-frame .page-size-selector + .btn-group {border-top:1px solid #EBEBEB;padding:6px 0;margin:0;}
+#root .sub-frame .page-size-selector + .btn-group .-tb-button-wrapper {height:24px;}
+#root .sub-frame .page-size-selector + .btn-group .-tb-button {font-size:12px;font-weight:normal;}
+
+
+/* [CONTENT] table Page size */
+.sub-frame .page-size-selector {margin-bottom:6px;font-size:12px;}
+
+
+
+
+
+/* [UTIL] clickable */
+.clickable {cursor:pointer;}
+.clickable:hover {color:rgb(42,150,253);font-weight:bold;}
+td.clickable { text-decoration: underline;}
+
+/* [UTIL] ellipsis */
+.ellipsis {overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+
+
+/* [MODAL] Small modal*/
+#root .my-modal {padding:10px 20px;}
+#root .my-modal .modal-title {height:50px;border-bottom:1px solid #ccc;}
+#root .my-modal .modal-title h3 {font-size:18px;font-weight:bold;line-height:50px;padding:0 5px;}
+#root .my-modal .modal-title h3 small {font-size:16px;color:#888;font-weight:normal;margin-left:3px;}
+#root .my-modal .modal-body {padding: 10px 0; height: calc(100% - 120px); overflow-y: auto;}
+#root .my-modal .modal-body hr {margin:5px 0;border:none;height:1px;background:#EbEbEb;}
+#root .my-modal .modal-action {height: 50px;line-height:50px;text-align:right;}
+/* [MODAL] Small modal :: BUTTON */
+#root .my-modal .modal-action .-tb-button-wrapper {height:26px;}
+#root .my-modal .modal-action .-tb-button {line-height:24px;cursor:pointer;font-size:12px;font-weight:normal}
+#root .my-modal .modal-action .-tb-button:hover {}
+/* [MODAL] Small modal :: info-table */
+#root .my-modal .modal-body .info-table {border:0;}
+#root .my-modal .modal-body hr + .info-table tr:first-child {height:32px;}
+#root .my-modal .modal-body hr + .info-table tr:first-child th {padding-top:0px;}
+/* [MODAL] Small modal :: overflow able */
+#root .modal-mask.overflow-able .modal-container > div {overflow-y:initial;}
+#root .modal-mask.overflow-able .my-modal {overflow:initial;}
+#root .modal-mask.overflow-able .my-modal .modal-body {overflow:initial;}
+
+
+/* [DIALOG] dialog */
+
+#root .-tb-validator--error .-tb-validator__error-message {z-index:10; background:#FFF; padding:3px 10px; border-radius:3px;
+    transform:translateY(calc(100% + 3px));
+    box-shadow:0 0 4px rgba(0,0,0,0.2), 2px 2px 4px rgba(0,0,0,0.2);}
+
+
+
+
+
+
+
+
+
+
+/* [COMP] OVERRIDE TeddyBear */
+/* [COMP] OVERRIDE TeddyBear :: text-field */
+#root .-tb-text-field {background:#f7f7f7;height:26px;border:none;}
+#root .-tb-text-field.user-select-field {width:125px;}
+#root .-tb-text-field .-tb-text-field__input {border:1px solid #F7F7F7;background:transparent;border-radius:0;font-size:12px;outline:none;}
+#root .-tb-text-field .-tb-text-field__input:focus {border:1px solid #2A96FD;}
+/* [COMP] OVERRIDE TeddyBear :: validator */
+#root .-tb-validator__error-message {font-size:1em;}
+/* [COMP] OVERRIDE TeddyBear :: button */
+#root .-tb-button-wrapper {width:auto;width:initial;}
+#root .-tb-button {border-radius:0;padding:0px 16px;background:#FFF;border:1px solid #EBEBEB;}
+#root .-tb-button:hover {opacity:0.8;}
+#root .-tb-button.primary {background:#2A96FD;border:1px solid #2A96FD;color:#FFF;}
+#root .-tb-button.normal  {background:#FFF;border:1px solid #CCC;}
+#root .-tb-button.normal:hover  {background:#CCC;border:1px solid #CCC;}
+/* [COMP] OVERRIDE TeddyBear :: dropdown */
+#root .dropdown {position: relative;display:inline-block;background:#f7f7f7;height:26px;border:none;display:-ms-inline-flexbox;-ms-flex-direction:column;}
+#root .card__search-comp-area__comp .dropdown {vertical-align: middle;}
+#root .disabled-button,
+#root .dropdown-button {height:26px;border-bottom:0; width:100%;}
+#root .dropdown-button i {flex-shrink:0;width:22px;margin:0px;}
+#root .dropdown-items {width:100%;min-width: 0px;border-color:#ccc;}
+#root .dropdown-selected {padding-left:10px;padding-right:3px;line-height:1;}
+#root .dropdown .disabled-button i{flex-shrink:0;width:22px;margin:0px;}
+/* [COMP] OVERRIDE TeddyBear :: data-table */
+#root .data-table-card {box-shadow:none;border-top:1px solid #333;border-bottom:1px solid #333; margin-bottom:-1px;}
+#root .data-table-card thead tr {height:34px;}
+#root .data-table-card thead th {line-height:34px;padding:0;background:#F7F7F7;color:black;color:initial;border:none;}
+#root .data-table-card tbody td {height:34px;vertical-align:middle;padding:0;white-space:nowrap;}
+#root .no-pagination .data-table-pager-area {display:none;}
+/* [COMP] OVERRIDE TeddyBear :: confirm modal */
+#root .-tb-confirm__wrapper {padding:0px 35px;overflow:hidden;width:inherit;}
+#root .-tb-confirm__content {padding:0px;}
+#root .-tb-confirm__message {height:inherit;}
+#root .-tb-confirm__message div {padding-top:35px;height:inherit;font-size:14px;}
+#root .-tb-confirm__button-area {padding: 10px 0 15px;}
+#root .-tb-confirm__button-area .-tb-confirm__button--negative,
+#root .-tb-confirm__button-area .-tb-confirm__button--positive {cursor:pointer;height:26px;line-height:26px;font-size:12px;min-width:0;
+    border-radius:0;padding:0 18px;}
+#root .-tb-confirm__button-area .-tb-confirm__button--negative {border:1px solid #ccc;color:#000;}
+#root .-tb-confirm__button-area .-tb-confirm__button--negative:hover {background:#F6F2F2;}
+#root .-tb-confirm__button-area .-tb-confirm__button--positive {border:none;margin-left:10px;}
+#root .-tb-confirm__button-area .-tb-confirm__button--positive:hover {opacity:0.8;}
+
+
+
+/* [COMP] OVERRIDE "vdp-datepicker" */
+#root .vdp-datepicker {width:125px;display:inline-block;border:0;vertical-align: middle;}
+#root .vdp-datepicker > div[class]:first-child {height:26px;line-height:24px;position:absolute;top:0;bottom:0;margin:auto;background:red;}
+#root .vdp-datepicker input {width:100%; height:26px;background:#F7F7F7;padding:0 10px;border:1px solid #F7F7F7;vertical-align: middle;display:block;}
+#root .vdp-datepicker input:focus {border:1px solid #2A96FD;}
+#root .vdp-datepicker .vdp-datepicker__clear-button {display:inline-block;vertical-align:middle;font-size:20px; height:26px;line-height:26px;
+    position:absolute;right:5px;top:0;bottom:0;}
+#root .vdp-datepicker .vdp-datepicker__clear-button:hover {color:#2A96FD;}
+#root .vdp-datepicker .vdp-datepicker__calendar {top:100%;}
+/* [COMP] OVERRIDE "vdp-datepicker" :: datepicker & divider height */
+#root .vdp-datepicker {height:40px;} /*이거 위치가 애매하다.*/
+#root .date-picker-divider {height: 40px;display: inline-block;margin: 0;border:none;vertical-align: middle;}
+#root .date-picker-divider::before {content:"~";margin:0 10px;}
+#root .info-table .vdp-datepicker {height:32px;} /*이거 위치가 애매하다.*/
+#root .info-table .date-picker-divider {height:32px;}
+
+/* [COMP] "basic-selectbox" - table page size selector */
+#root .basic-selectbox {border:none;background:#FFF;cursor:pointer;}
+
+/* [COMP] "TAB! myTab!" */
+#root .my-tab-wrapper {width:100%;position:relative;}
+/* [COMP] "TAB! myTab!" :: 상단 tab 영역 */
+#root .my-tab-navi {border-bottom:1px solid #999;}
+#root .my-tab-navi ul {font-size:0;}
+#root .my-tab-navi ul li {display:inline-block;padding:0px 30px;cursor:pointer;margin-bottom:-1px;background:#ebebeb;
+    height:35px;line-height:35px;text-align:center;font-size:14px;border:1px solid #999;}
+#root .my-tab-navi ul li + li {margin-left:-1px;}
+#root .my-tab-navi ul li.active {border-bottom-color:#FFF;background:#FFF;}
+#root .my-tab-navi ul li.active:after {content:' ';position:absolute;top:-1px;height:5px;left:-1px;right:-1px;background:$col-prim;}
+/* #root .my-tab-navi ul li:hover {color:#2196F3;background:rgba(42,150,253,0.1);}
+#root .my-tab-navi ul li.active:hover {background:none;} */
+/* #root .my-tab-navi ul li.active {border-bottom:5px solid #2196F3;border-top:5px solid rgba(0,0,0,0);font-weight:bold;line-height:40px;} */
+#root .my-tab-navi .tabidx{position:absolute;top:0px;right:0px;bottom:0px;}
+#root .my-tab-navi .tabidx button{height:26px;line-height:24px;}
+#root .my-tab-navi .tabidx button[disabled]{cursor: default; color:#A6A6A6; }
+/* [COMP] "TAB! myTab!" :: 아래 Conetent 영역 */
+#root .my-tab-cont {padding:20px 0;position:relative;width:100%;min-height:200px;display:none;}
+#root .my-tab-cont.active{display:block;}
+#root .my-tab-cont.cont-empty {font-size:24px; text-align:center;padding-top:30px;color:#AAA;}
+
+/* [COMP] GLOBAL "placeholder" */
+#root input::-webkit-input-placeholder { color:rgba(128,128,128,1); } /* Chrome/Opera/Safari */
+#root input::-moz-placeholder { color:rgba(128,128,128,1); }  /* Firefox 19+ */
+#root input:-ms-input-placeholder { color:rgba(128,128,128,1); } /* IE 10+ */
+#root input:-moz-placeholder { color:rgba(128,128,128,1); }  /* Firefox 18- */
+#root input:focus { outline: none; }
+
+
+
+
+/*--------------------- 이하 쓰레기통 ---------------------*/
+
+/* .sub-frame .title-group .menu {position:absolute;right:0; height: 30px; line-height:30px;
+    color: #808080;  font-size: 16px; display:inline-block;}
+.sub-frame .title-group .menu span:last-child{font-weight: bold;} */
+
+
+
+
+
+
+
+/* [COMP] OVERRIDE TeddyBear :: data-table :: table cell + dropdown*/
+/* #root .data-table-card td .dropdown {display:inline-block;}
+#root .data-table-card td .dropdown .dropdown-button{height:30px;border:1px solid #DDD;}
+#root .data-table-card td .dropdown .dropdown-button i{margin:0 8px;} */
+
+
+
+/* .sub-frame .info-table .-tb-text-field {height:30px;}
+.sub-frame .info-table .-tb-text-field__input {outline:none;border:1px solid #DDD;}
+.sub-frame .info-table .dropdown {display:inline-block;background:#FFF;
+                                  display:-ms-inline-flexboxfor IE compatibility;
+                                  -ms-flex-direction:columnfor IE compatibility;}
+.sub-frame .info-table .dropdown .dropdown-button{height:30px;border:1px solid #DDD; padding-left: 8px; width:100%;}
+.sub-frame .info-table .dropdown .dropdown-button i{flex-shrink:0;width:22px;margin:0px;}
+.sub-frame .info-table .dropdown .dropdown-items {margin-top:0px;}
+.sub-frame .info-table .dropdown .disabled-button{height:30px;border:1px solid #DDD; background-color: #EDEDED; opacity: 0.5; padding-left: 8px;}
+.sub-frame .info-table .dropdown .disabled-button i{flex-shrink:0;width:22px;margin:0px;} */
+
+
+/* .sub-frame .card__search-comp-area__comp .dropdown {height:32px;display:-ms-inline-flexboxfor IE compatibility;-ms-flex-direction:columnfor IE compatibility;min-width:120px;
+    background:#FFF;border:1px solid #888;}
+[CONTENT] content search box - components - dropdown
+.sub-frame .card__search-comp-area__comp .dropdown {padding:0 4px;}
+.sub-frame .card__search-comp-area__comp .dropdown .dropdown-button {border-bottom:none; margin:0px 4px; height:30px;}
+.sub-frame .card__search-comp-area__comp .dropdown .dropdown-button i{flex-shrink:0;width:22px;margin:0px;}
+.sub-frame .card__search-comp-area__comp .dropdown .dropdown-items {margin-top:1px;} */

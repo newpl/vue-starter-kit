@@ -3,7 +3,7 @@
     <div class="register">
         <div class="register-content">
             <div class="register-box register-window">
-                <h2 class="mb-3 register-signup-heading"><b>Create Your NF Account</b></h2>
+                <h2 class="mb-3 register-signup-heading"><b>Create Your MIP Account</b></h2>
                 <tb-validator ref="validForm" form>
                     <div class="mb-3">
                         <div class="register__label register__label--required">아이디</div>

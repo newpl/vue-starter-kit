@@ -3,9 +3,9 @@
         <div class="main-page--wrapper">
             <div class="main-page">
                 <span class="main-page__title">
-                    <h2>Digital Finance Platform</h2>
+                    <h2>Made In Platform</h2>
                     <hr>
-                    <small>Nexfinance Starter Kit</small>
+                    <small>MIP Starter Kit</small>
                 </span>
                 <article>
                     <p>

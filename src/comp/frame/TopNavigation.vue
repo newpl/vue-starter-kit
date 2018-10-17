@@ -1,6 +1,6 @@
 <template>
     <div class="top-navigation">
-        <div class="top-navigation__home" @click="goto('/home')">Nexfinance</div>
+        <div class="top-navigation__home" @click="goto('/home')">MIP</div>
         <div class="top-navigation__register" :class="isActived" @click="goto('/register')">SIGN UP</div>
         <div class="top-navigation__login" :class="isActived">
             <span v-if="isLoggedIn" class="top-navigation__login__label" @click="goto('/login')">LOGIN</span>

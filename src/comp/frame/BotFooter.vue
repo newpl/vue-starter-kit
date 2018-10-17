@@ -1,6 +1,6 @@
 <template>
     <div class="footer">
-        <div class="copyright">Copyright {{year}} SAMSUNG SDS. All rights reserved. </div>
+        <div class="copyright">Made by Dongha, {{year}}. </div>
     </div>
 </template>
 

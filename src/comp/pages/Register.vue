@@ -175,8 +175,6 @@ export default {
         loginCheckedMessage: function() {
             if(this.checkedId=="none"){
                 return "사용가능한 아이디입니다."
-            } else if(this.checkedId=="ISDP") {
-                return "ISDP 회원입니다. 통합회원가입을 위해 로그인이 필요합니다."
             } else if(this.checkedId=="DELETED") {
                 return "탈퇴한 회원 아이디입니다. 재가입은 관리자에게 문의하세요."
             } else if(this.checkedId=="KIT") {

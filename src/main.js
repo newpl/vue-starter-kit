@@ -23,9 +23,9 @@ Vue.use (notifications);
 import ES6Promise from 'es6-promise';
 ES6Promise.polyfill()
 
-/* import TeddyBear */
-import TeddyBear from '../teddyBear/teddybear.js';
-Vue.use(TeddyBear);
+/* import external module */
+import ExternalTb from '../external_modules/external_tb';
+Vue.use(ExternalTb);
 
 Vue.config.productionTip = false
 

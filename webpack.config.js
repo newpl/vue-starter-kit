@@ -61,7 +61,7 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         include : [ resolve('/') ],
-        exclude : [/node_modules/,/teddyBear/]
+        exclude : [/node_modules/,/external_modules/]
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
